@@ -1,0 +1,43 @@
+﻿@model List<Banka>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Banka Data</title>
+</head>
+<body>
+    <h1>Banka Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tarih</th>
+                <th>Saat</th>
+                <th>Açılış</th>
+                <th>Yüksek</th>
+                <th>Düşük</th>
+                <th>Kapanış</th>
+                <th>Ortalama</th>
+                <th>Hacim</th>
+                <th>Lot</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Tarih</td>
+                    <td>@item.Saat</td>
+                    <td>@item.Açılış</td>
+                    <td>@item.Yüksek</td>
+                    <td>@item.Düşük</td>
+                    <td>@item.Kapanış</td>
+                    <td>@item.Ortalama</td>
+                    <td>@item.Hacim</td>
+                    <td>@item.Lot</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
